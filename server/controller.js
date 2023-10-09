@@ -2,7 +2,6 @@ const database = []
 
 
 
-
 module.exports = {
 
     getCompliment: (req, res) => {
@@ -31,6 +30,13 @@ module.exports = {
         database.push(req.body)
 
         res.status(200).send(database)
+    },
+
+    deleteTeam: (req, res) => {
+        console.log(+req.params.id)
+        let index = teams.findIndex(team => team.id === +req.params.id)
+        teams.splice(index, 1)
+        res.status(200).send(teams)
     }
 
 }

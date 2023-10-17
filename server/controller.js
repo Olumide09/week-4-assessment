@@ -32,11 +32,18 @@ module.exports = {
         res.status(200).send(database)
     },
 
-    deleteTeam: (req, res) => {
-        console.log(+req.params.id)
-        let index = teams.findIndex(team => team.id === +req.params.id)
-        teams.splice(index, 1)
-        res.status(200).send(teams)
+
+    updateTeam: (req, res) => {
+        const {newTeam, lookupId} = req.body
+
+        let index = teams.findIndex(team => team.lookupId === +req.params.id)
+        if (index === lookupId) {
+            teams[index].status === newStatus
+            req.status(200).send(teams)
+            console.log("New status:")
+            console.log(teams)
+        }
     }
+
 
 }

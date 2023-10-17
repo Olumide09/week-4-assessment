@@ -8,6 +8,8 @@ const teamInput = document.getElementById("team-input")
 
 const myDiv = document.getElementById("results-landing-page")
 
+const updateTform = document.getElementById('form2')
+
 const getCompliment = () => {
     axios.get("http://localhost:4000/api/compliment/")
         .then(res => {
@@ -47,6 +49,14 @@ const postTeam = (event) => {
     })
     .catch(() => {})
 }
+
+
+const updateTeam = (id, type) => axios.put(`http://localhost:4000/api/team/${id}`)
+.then(res => {
+    updateTeam(res.data)
+})
+
+updateTform.addEventListener('submit', updateTeam)
 
 complimentBtn.addEventListener('click', getCompliment)
 

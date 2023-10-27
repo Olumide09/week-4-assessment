@@ -33,17 +33,7 @@ module.exports = {
     },
 
 
-    updateTeam: (req, res) => {
-        const {newTeam, lookupId} = req.body
-
-        let index = teams.findIndex(team => team.lookupId === +req.params.id)
-        if (index === lookupId) {
-            teams[index].status === newStatus
-            req.status(200).send(teams)
-            console.log("New status:")
-            console.log(teams)
-        }
-    }
+    
 
 
 }

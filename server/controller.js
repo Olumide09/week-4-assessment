@@ -1,5 +1,9 @@
 const database = []
 
+const teams = require('./db.json')
+
+let upcomingTeamID = 4
+
 
 
 module.exports = {
@@ -33,7 +37,32 @@ module.exports = {
     },
 
 
-    
+    getTeams: (req, res) => {
+        res.status(200).send(teams)
+    },
+
+
+    deleteTeam: (req, res) => {
+        console.log("this user wants to delete",+req.params.id)
+        console.log("coming soon")
+    },
+
+    createTeam: (req, res) => {
+        const {teamName, favPlayer} = req.body
+        let newTeam = {
+            id: upcomingTeamID,
+            teamName: teamName,
+            favPlayer
+        }
+
+        teams.push(newTeam)
+        upcomingTeamID = upcomingTeamID + 1
+    },
+
+
+    updateTeam: (req, res) => {
+        console.log("this user is trying to update this item")
+    }
 
 
 }

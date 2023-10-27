@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "teamName": "Arsenal",
+        "favPlayer": "G. Martineli(11)"
+    },
+
+    {
+        "id": 2,
+        "teamName": "Manchester City",
+        "favPlayer": "P. Foden(47)"
+    },
+
+    {
+        "id": 3,
+        "teamName": "Liverpool",
+        "favPlayer": "M. Salah(11)"
+    }
+]

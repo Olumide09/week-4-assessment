@@ -5,7 +5,6 @@
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
-                    
 
     <button id="fortuneButton">Get a fortune</button>
 
@@ -13,16 +12,20 @@
 
     <form id="post-form">
       <label for="team-input">Favourite Soccer Team</label>
-      <input id="team-input"/>
+      <input id="team-input" />
 
       <button>Submit</button>
-        
     </form>
 
-    
+    <form id="team-form">
+      <input type="text" id="football-team" placeholder="What the team name" />
+      <input type="text" id="fav-player"   placeholder="Who is your Favourite player?" />
+      <button>Submit</button>
+    </form>
+
+    <section id="teams-container"></section>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
-    
   </body>
 </html>
